@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c085b2;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+button {
+  transition: 0.3s ease-out;
+  padding: 0.5rem 1rem;
+  background: #ff1d8e;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+}
+button:hover {
+  background: #910451;
+}
+button:active {
+  transition: 0.5s ease-out;
+  background: #ebebeb;
+}
+
+.container {
+  width: clamp(100%, 1200px, 100%);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input_container+.input_container {
+  margin-top: 1rem;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+input {
+  background: none;
+  border: 1px solid #161616;
+  color: #d1d1d1;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  outline: 0px;
+}
+
+input:focus {
+  border: 1px solid #1e1e1e;
+}
+
+#productForm {
+  margin-top: 3rem;
+  margin-inline: auto;
+}
+
+form {
+  padding: 1rem;
+  background: #e7bcd9;
+  border-radius: 0.5rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  margin-top: 1.5rem;
+}
