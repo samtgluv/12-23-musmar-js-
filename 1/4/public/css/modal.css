@@ -1,0 +1,56 @@
+/* Тот самый класс */
+.open {
+    display: block;
+  }
+  
+  .modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина экрана */
+    height: 100%; /* Полная высота экрана */
+    overflow: auto; /* Добавить прокрутку, если нужно */
+    background-color: rgb(0,0,0); /* Черный фон с прозрачностью */
+    background-color: rgba(0,0,0,0.4); /* Чёрный с прозрачносью */
+  }
+  
+  .modal.open {
+    display: block; /* Показать при добавлении класса 'open' */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и центрировать */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина окна */
+  }
+  
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes slide-down {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

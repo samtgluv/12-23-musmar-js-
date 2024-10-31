@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./public/js/modal.js" defer></script>
+  <link rel="stylesheet" href="./public/css/style.css">
+  <title>sm4</title>
+</head>
+
+<body>
+  <button id="openModal">Открыть модальное окно</button>
+
+  <!-- Модальное окно -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <!-- Кнопка для закрытия -->
+      <span class="close">×</span>
+      <p>Молодцы, теперь закройте</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <p class="counter">0</p>
+  <div class="buttons">
+    <button onclick="changeCounter('plus')" id="plusBtn">+</button>
+    <button onclick="changeCounter('reset')" id="resetBtn">Сбросить</button>
+    <button onclick="changeCounter('minus')" id="minusBtn">-</button>
+    <button onclick="clearHeadlines()" id="clearBtn">Очистить заголовки</button>
+  </div>
+
+  <hr>
+
+  <button onclick="createHeadline()" id="createBtn">Создать заголовок</button>
+  <div class="wrapper">
+    <!-- Заголовки будут здесь -->
+  </div>
+  
+  <script>
+    const counter = document.querySelector('.counter');
+
+    function changeCounter(type) {
+      if (counter.innerHTML === '0' || counter) {
+        if (type === 'plus') {
+          counter.innerHTML++;
+        } else if (type === 'minus') {
+          counter.innerHTML--;
+        } else if (type === 'reset') {
+          counter.innerHTML = 0;
+        }
+      }
+    }
+
+    const resetButton = document.querySelector('#resetBtn');
+
+    resetButton.addEventListener('mouseenter', () => {
+      resetButton.style.width = '100rem';
+      console.log('Размер элемента увеличился');
+    });
+
+    resetButton.onmouseleave = () => {
+      resetButton.style.width = 'auto';
+    }
+
+    const wrapper = document.querySelector('.wrapper');
+
+    function createHeadline() {
+      const headline = document.createElement('h1');
+      headline.innerHTML = 'Это моя практика :)';
+      headline.classList.add('purple');
+      wrapper.append(headline);
+    }
+
+    // Функция для очистки заголовков
+    function clearHeadlines() {
+      while (wrapper.firstChild) {
+        wrapper.removeChild(wrapper.firstChild);
+      }
+    }
+  </script>
+</body>
+
+</html>
